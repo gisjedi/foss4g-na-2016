@@ -1,7 +1,7 @@
-# DataViz Nov 2015 
+# FOSS4G North America 2016 - Image Mosaics & Automation 
 Scripts to construct docker containers and populate with up to date MODIS and VIIRS DNB data. Compose support for a full stand up of OGC Preview and GeoServer fronting PostGIS.
 
-Slides can be found at http://gisjedi.github.io/dataviz-nov2015
+Slides can be found at http://gisjedi.github.io/foss4g-na-2016
 
 ## Build
 Construct the GeoServer and Apache containers by running build:
@@ -28,3 +28,7 @@ Access your newly constructed containers on either http://localhost (Linux only)
 ```docker-machine ip default```
 
 Access OGC preview at either http://localhost/ or http://yourip/
+
+## Caveats
+
+Docker was originally designed for Linux so YMMV on Mac / Windows environments. As of Docker Toolbox 1.10+ Windows and Mac provide a fairly consistent experience, but be aware of the key limitation of Docker Machine: above commands will only work in thier entirety when project is cloned into the User's home directory or a subdirectory.  Reference https://github.com/docker/compose/issues/2548. 
