@@ -1,13 +1,13 @@
 <featureType>
-  <name>modis-2015</name>
-  <nativeName>modis_2015</nativeName>
+  <name>modis</name>
+  <nativeName>modis</nativeName>
   <namespace>
     <name>feature</name>
   </namespace>
-  <title>MODIS (2015)</title>
+  <title>MODIS (2016)</title>
   <keywords>
     <string>features</string>
-    <string>modis-2015</string>
+    <string>modis</string>
   </keywords>
   <nativeCRS>GEOGCS[&quot;WGS 84&quot;, 
   DATUM[&quot;World Geodetic System 1984&quot;, 
