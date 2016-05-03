@@ -5,5 +5,5 @@
     <workspace>
         <name>mosaic</name>
     </workspace>
-    <url>file:mosiacs/viirs-dnb</url>
+    <url>file:mosaics/viirs-dnb/config</url>
 </coverageStore>
