@@ -6,15 +6,16 @@ cd /tmp
 # Identify year for pulling data
 YEAR=$(date +'%Y')
 SOURCEPAGE=modisfire_${YEAR}_conus.htm
+OPTS=--no-check-certificate
 
 # Identify shapefile with current days data
-wget http://activefiremaps.fs.fed.us/data/fireptdata/$SOURCEPAGE
+wget $OPTS https://fsapps.nwcg.gov/afm/data/fireptdata/$SOURCEPAGE
 SHAPEFILEZIP=`cat $SOURCEPAGE |grep shapefile -m 1| cut -d "\"" -f 2`
 rm $SOURCEPAGE
 echo $SHAPEFILEZIP
 
 # Grab file name only and unzip dataset
-wget $SHAPEFILEZIP
+wget $OPTS $SHAPEFILEZIP
 SHAPEFILEZIP=$(basename $SHAPEFILEZIP)
 unzip $SHAPEFILEZIP
 rm $SHAPEFILEZIP
